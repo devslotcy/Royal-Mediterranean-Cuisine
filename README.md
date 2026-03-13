@@ -1,46 +1,42 @@
-# Royal Mediterranean Cuisine — PHP Website
+# 🍽️ Royal Mediterranean Cuisine — Restaurant Website
 
-Multi-language restaurant website for [samuiroyal.com](https://samuiroyal.com), serving authentic Mediterranean cuisine in Koh Samui, Thailand.
+Official website for Royal Mediterranean Cuisine, a restaurant based in Koh Samui, Thailand. Built with multi-language support for international guests and a full admin panel for content management.
 
 ## Features
 
-- 7-language support: English, Turkish, Arabic, Thai, German, French, Italian
-- Two branch locations: Chaweng Beach & Lamai Beach
-- Dynamic menu management with admin panel
-- WhatsApp reservation integration
-- SEO-ready with sitemap.xml and robots.txt
-- Clean URL routing with language prefixes (`/en/`, `/tr/`, `/ar/`, etc.)
+- **7 Languages** — English, Thai, Russian, Arabic, Chinese, German, French
+- **2 Branch Locations** — separate menus and info per branch
+- **Admin Panel** — manage menu items, gallery, reservations, and content
+- **Responsive Design** — optimized for mobile and desktop
+- **SEO Optimized** — meta tags and structured data for each language
 
 ## Tech Stack
 
-- PHP (no framework, lightweight MVC-style architecture)
-- MySQL with PDO
-- Multi-language routing via URL path segments
+- **Language:** PHP
+- **Frontend:** HTML, CSS, JavaScript, Bootstrap
+- **Backend:** PHP (MVC structure)
+- **Database:** MySQL
+- **Admin:** Custom-built CMS
+
+## Pages
+
+- Home / Landing
+- Menu (by branch, by category)
+- About & Story
+- Gallery
+- Reservations
+- Contact & Location
+- Admin Panel (protected)
 
 ## Setup
 
-1. Clone the repo
-2. Copy `config/db.example.php` → `config/db.php` and fill in your database credentials
-3. Import `setup.sql` to initialize the database schema
-4. Configure your web server to point root at the project folder (Apache `.htaccess` included)
-
-## Project Structure
-
-```
-royal-php/
-├── admin/          # Admin panel (menu, content, image management)
-├── config/         # App config & database connection
-├── includes/       # Shared partials (header, footer)
-├── lang/           # Translation strings (en, tr, ar, th, de, fr, it)
-├── pages/          # Page templates (home, about, menu-chaweng, menu-lamai)
-├── public/         # Static assets (CSS, JS, images, menu photos)
-├── router.php      # URL router & language dispatcher
-└── sitemap.php     # Dynamic sitemap generator
+```bash
+git clone https://github.com/devslotcy/Royal-Mediterranean-Cuisine
+# Import database schema from /database/schema.sql
+# Configure /config/database.php with your DB credentials
+# Deploy to Apache/Nginx with PHP 8+
 ```
 
-## Locations
+---
 
-| Branch | Address | Phone |
-|--------|---------|-------|
-| Chaweng | 4/3 Moo 3, Chaweng Beach Road, Koh Samui, 84320 | +66 98 256 7595 |
-| Lamai | 124/7 Moo 3, Lamai Beach Road, Koh Samui, 84310 | +66 94 335 8904 |
+Built by [Mucahit Tiglioglu](https://github.com/devslotcy)
