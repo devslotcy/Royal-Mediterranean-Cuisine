@@ -1,42 +1,46 @@
-# Royal Turkish Cuisine — PHP Website
+# Royal Mediterranean Cuisine — PHP Website
 
-Multi-language restaurant website for [samuiroyal.com](https://samuiroyal.com), serving Koh Samui, Thailand.
+Multi-language restaurant website for [samuiroyal.com](https://samuiroyal.com), serving authentic Mediterranean cuisine in Koh Samui, Thailand.
 
 ## Features
 
-- Multi-language support: EN, TR, AR, TH, DE, FR, IT
-- Two branch locations: Chaweng & Lamai
-- Dynamic menu system with admin panel
-- SEO-ready with sitemap and robots.txt
+- 7-language support: English, Turkish, Arabic, Thai, German, French, Italian
+- Two branch locations: Chaweng Beach & Lamai Beach
+- Dynamic menu management with admin panel
 - WhatsApp reservation integration
+- SEO-ready with sitemap.xml and robots.txt
+- Clean URL routing with language prefixes (`/en/`, `/tr/`, `/ar/`, etc.)
 
 ## Tech Stack
 
-- PHP (no framework, clean MVC-style)
-- MySQL / PDO
-- Multi-language routing via URL segments (`/en/`, `/tr/`, etc.)
+- PHP (no framework, lightweight MVC-style architecture)
+- MySQL with PDO
+- Multi-language routing via URL path segments
 
 ## Setup
 
 1. Clone the repo
-2. Copy `config/db.example.php` to `config/db.php` and fill in your DB credentials
+2. Copy `config/db.example.php` → `config/db.php` and fill in your database credentials
 3. Import `setup.sql` to initialize the database schema
-4. Point your web server root to the project folder
+4. Configure your web server to point root at the project folder (Apache `.htaccess` included)
 
-## Structure
+## Project Structure
 
 ```
 royal-php/
-├── admin/          # Admin panel
-├── config/         # App config & DB connection
+├── admin/          # Admin panel (menu, content, image management)
+├── config/         # App config & database connection
 ├── includes/       # Shared partials (header, footer)
-├── lang/           # Translation files
-├── pages/          # Page controllers
-├── public/         # Static assets (CSS, JS, images)
-└── router.php      # URL router
+├── lang/           # Translation strings (en, tr, ar, th, de, fr, it)
+├── pages/          # Page templates (home, about, menu-chaweng, menu-lamai)
+├── public/         # Static assets (CSS, JS, images, menu photos)
+├── router.php      # URL router & language dispatcher
+└── sitemap.php     # Dynamic sitemap generator
 ```
 
 ## Locations
 
-- **Chaweng:** 4/3 Moo 3, Chaweng Beach Road, Koh Samui
-- **Lamai:** 124/7 Moo 3, Lamai Beach Road, Koh Samui
+| Branch | Address | Phone |
+|--------|---------|-------|
+| Chaweng | 4/3 Moo 3, Chaweng Beach Road, Koh Samui, 84320 | +66 98 256 7595 |
+| Lamai | 124/7 Moo 3, Lamai Beach Road, Koh Samui, 84310 | +66 94 335 8904 |
