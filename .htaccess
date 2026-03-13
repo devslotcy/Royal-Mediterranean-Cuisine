@@ -1,0 +1,26 @@
+Options -Indexes
+RewriteEngine On
+
+# Block direct access to sensitive directories
+RewriteRule ^(includes|config|lang)/ - [F,L]
+
+# Serve static files and directories directly
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Normalize: remove trailing slash (except root)
+RewriteCond %{REQUEST_URI} ^/(.+)/$
+RewriteRule ^ /%1 [R=301,L]
+
+# Language routes
+RewriteRule ^(en|tr|ar|th|de|fr|it)$ /index.php?lang=$1&page=home [L,QSA]
+RewriteRule ^(en|tr|ar|th|de|fr|it)/about$ /index.php?lang=$1&page=about [L,QSA]
+RewriteRule ^(en|tr|ar|th|de|fr|it)/menu/chaweng$ /index.php?lang=$1&page=menu&branch=chaweng [L,QSA]
+RewriteRule ^(en|tr|ar|th|de|fr|it)/menu/lamai$ /index.php?lang=$1&page=menu&branch=lamai [L,QSA]
+
+# Sitemap
+RewriteRule ^sitemap\.xml$ /sitemap.php [L]
+
+# Default: root goes to English home
+RewriteRule ^$ /index.php?lang=en&page=home [L,QSA]

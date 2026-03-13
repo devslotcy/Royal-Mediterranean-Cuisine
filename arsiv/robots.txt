@@ -1,0 +1,22 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /config/
+Disallow: /includes/
+Disallow: /lang/
+Disallow: /pages/
+Disallow: /?*logout*
+Crawl-delay: 2
+
+User-agent: Googlebot
+Allow: /
+Disallow: /admin/
+Disallow: /config/
+Disallow: /includes/
+Disallow: /lang/
+Disallow: /pages/
+
+User-agent: Googlebot-Image
+Allow: /public/images/
+
+Sitemap: https://samuiroyal.com/sitemap.xml

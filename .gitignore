@@ -1,0 +1,19 @@
+# Database credentials - NEVER commit
+config/db.php
+
+# SQL dumps - contains real data
+*.sql
+arsiv.zip
+
+# Environment & secrets
+.env
+.env.local
+.env.production
+
+# System files
+.DS_Store
+Thumbs.db
+
+# PHP cache
+*.cache
+/vendor/
